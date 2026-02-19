@@ -1,15 +1,14 @@
-package com.project.supply_chain_tracker.entities;
+package com.project.supply_chain_tracker.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.Table;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 
+@lombok.Data
 @Entity
-@Getter
-@Setter
+@Table(name = "suppliers")
 public class Supplier {
 
     @Id
@@ -22,6 +21,6 @@ public class Supplier {
 
     private String certLevel;
 
-    private String sustainabilityMetrics;
-    
+    private Double sustainabilityMetrics;
+
 }
